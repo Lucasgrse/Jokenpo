@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/txtJokenPo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PedraPapelTesoura"
+        android:textSize="30dp"
+        android:layout_margin="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ImageButton
+        android:id="@+id/scissorsButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/scissorsButton"
+        app:layout_constraintEnd_toStartOf="@+id/stoneButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtJokenPo"
+        />
+
+    <ImageButton
+        android:id="@+id/stoneButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/stone"
+        app:layout_constraintStart_toEndOf="@id/scissorsButton"
+        app:layout_constraintTop_toBottomOf="@id/txtJokenPo"
+        app:layout_constraintEnd_toStartOf="@id/paperButton"
+        />
+
+    <ImageButton
+        android:id="@+id/paperButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/paper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/stoneButton"
+        app:layout_constraintTop_toBottomOf="@id/txtJokenPo"
+        />
+
+    <TextView
+        android:id="@+id/makeYourChooseTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:text="You:"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stoneButton"
+        />
+
+    <TextView
+        android:id="@+id/choosePlayerTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="-"
+        android:textSize="21sp"
+        app:layout_constraintStart_toEndOf="@+id/makeYourChooseTxt"
+        app:layout_constraintTop_toTopOf="@+id/makeYourChooseTxt"
+        />
+
+    <TextView
+        android:id="@+id/chooseBotTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Bot:"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/makeYourChooseTxt"
+        />
+
+    <TextView
+        android:id="@+id/optionChooseBotTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="-"
+        android:textSize="21sp"
+        app:layout_constraintStart_toEndOf="@+id/chooseBotTxt"
+        app:layout_constraintTop_toTopOf="@+id/chooseBotTxt"
+        />
+
+    <TextView
+        android:id="@+id/youVsBotTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="You X Bot"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooseBotTxt" />
+
+    <TextView
+        android:id="@+id/scoreBoardTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text=":"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/youVsBotTxt" />
+
+    <TextView
+        android:id="@+id/resultPlayerTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="0"
+        android:textSize="21sp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/youVsBotTxt"
+        app:layout_constraintEnd_toStartOf="@id/scoreBoardTxt"/>
+
+    <TextView
+        android:id="@+id/resultBotTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="0"
+        android:textSize="21dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="@id/scoreBoardTxt"
+        app:layout_constraintTop_toBottomOf="@+id/youVsBotTxt" />
+
+    <Button
+        android:id="@+id/newGame"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/corBtn"
+        android:text="New Game"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
